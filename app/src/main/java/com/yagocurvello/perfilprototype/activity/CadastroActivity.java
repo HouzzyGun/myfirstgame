@@ -85,11 +85,11 @@ public class CadastroActivity extends AppCompatActivity {
                     try {
                         throw task.getException();
                     } catch (FirebaseAuthWeakPasswordException e) {
-                        error = "Senha fraca";
+                        error = "Senha muito fraca";
                     } catch (FirebaseAuthInvalidCredentialsException e){
                         error = "email inválido";
                     } catch (FirebaseAuthUserCollisionException e){
-                        error = "email já cadastrado";
+                        error = "email já foi cadastrado";
                     }catch (Exception e){
                         error = "Erro: " + e.getMessage();
                         e.printStackTrace();
